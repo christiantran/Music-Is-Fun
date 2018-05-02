@@ -1,0 +1,8 @@
+body {
+    background-image: url(/Music-Is-Fun/assets/musicbackground.jpg);
+    background-size: cover;
+}
+
+.sub-text {
+    font-family: 'Shadows Into Light', cursive;
+}

@@ -14,6 +14,7 @@ function draw(results){
   for(let i = 0; i < results.length; i++) {
     const song = results[i];
     template += `
+    
     <div>
       <h3>title: ${song.title}</h3>
       <img src ="${song.albumArt}"</h3>
