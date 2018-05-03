@@ -1,6 +1,7 @@
 body {
-    background-image: url(/Music-Is-Fun/assets/musicbackground.jpg);
+    background-image: url(/assets/musicbackground.jpg);
     background-size: cover;
+    background-attachment: fixed;
 }
 
 .sub-text {

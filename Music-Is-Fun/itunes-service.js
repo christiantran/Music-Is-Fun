@@ -1,6 +1,10 @@
 function ItunesService(){
 
-  //slack link
+  function swapUrlSize(url, pixels) {
+    var sizeString = `${pixels}x${pixels}`;
+    var newURL = url.replace("60x60", sizeString);
+    return newURL;
+  }
 
     this.getMusicByArtist = function(artist) {
 
@@ -15,7 +19,7 @@ function ItunesService(){
         var songList = response.results.map(function (song) {
                   return {
                       title: song.trackName,
-                      albumArt: song.artworkUrl60, //swapURLSize(song.artworkUrl60, 200),
+                      albumArt: swapUrlSize(song.artworkUrl60, 200),
                       artist: song.artistName,
                       collection: song.collectionName,
                       price: song.collectionPrice,
