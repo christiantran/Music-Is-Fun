@@ -14,17 +14,26 @@ function draw(results){
   for(let i = 0; i < results.length; i++) {
     const song = results[i];
     template += `
+
+<div class="card" style="width: 18rem;">
     
-    <div>
-      <h3>title: ${song.title}</h3>
-      <img src ="${song.albumArt}"</h3>
-      <h3>artist: ${song.artist}</h3>
-      <h3>collection: ${song.collection}</h3>
-      <h3>price: ${song.price}</h3>
-      <h3>preview: ${song.preview}</h3>
+    <div class="card-body">
+    <h1 class="card-text">Artist: ${song.artist}</h1>
+      <img class="card-img-top" src="${song.albumArt}" alt="Card image cap">
+      <h2 class="card-title">Title: ${song.title}</h2>
     </div>
-    `
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">collection: ${song.collection}</li>
+      <li class="list-group-item">price: ${song.price}</li>
+    </ul>
+    <div class="card-body">
+      <a href="#" class="card-link btn btn-warning">preview: ${song.preview}</a>
+    </div>
+  </div>
+
+  `
   }
+
   document.getElementById('songs').innerHTML = template
   console.log(results)
 }
