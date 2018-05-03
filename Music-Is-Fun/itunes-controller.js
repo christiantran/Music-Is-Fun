@@ -29,9 +29,9 @@ function ItunesController() {
       <h1 class="card-text">Artist: ${song.artist}</h1>
       <h3 class="card-title">Title: ${song.title}</h3>
       <h5 class="list-group-item">collection: ${song.collection}</h5>
-      <h5 class="list-group-item">price: ${song.price}</h5>
+      <h5 class="list-group-item">price: $${song.price}</h5>
     <div class="card-body">
-    <audio controls><a href="#" class="card-link btn btn-danger">${song.preview}</a></audio>
+    <audio src="" controls><a href="#" class="card-link btn btn-danger">${song.preview}</a></audio>
   </div>
       </div>
     </div>

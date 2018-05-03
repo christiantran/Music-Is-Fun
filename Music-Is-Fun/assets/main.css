@@ -7,3 +7,8 @@ body {
 .sub-text {
     font-family: 'Shadows Into Light', cursive;
 }
+
+.glow-button:hover {
+    color: white;
+    box-shadow: 0px 10px 15px white;
+   }
