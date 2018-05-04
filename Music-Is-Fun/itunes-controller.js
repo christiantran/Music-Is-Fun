@@ -17,7 +17,7 @@ function ItunesController() {
 
   <div class="row">
   <div class="col-sm-5 offset-1">
-    <div class="card mb-5" style="width: 25rem">
+    <div class="card mb-5" style="width: 20rem">
       <div class="card-body">
       <img class="card-img-top" src="${song.albumArt}" alt="Card image cap">
       </div>
@@ -27,8 +27,8 @@ function ItunesController() {
     <div class="card text-right">
       <div class="card-body">
       <h2 class="card-text">Artist: ${song.artist}</h2>
-      <h3 class="card-title">Title: ${song.title}</h3>
-      <h5 class="list-group-item mb-2">collection: ${song.collection}</h5>
+      <h3 class="list-group-item mb-2">Title: ${song.title}</h3>
+      <h5 class="card-title">collection: ${song.collection}</h5>
       <a href="https://www.apple.com/itunes/music/" class="btn btn-outline-danger" role="button" aria-pressed="true">price: $${song.price}</a>
       <div class="card-body">
     <audio controls controlsList="nodownload" src="${song.preview}"></audio>
