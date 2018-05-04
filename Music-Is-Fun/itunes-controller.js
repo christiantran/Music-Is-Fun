@@ -16,22 +16,22 @@ function ItunesController() {
       template += `
 
   <div class="row">
-  <div class="col-sm-6">
-    <div class="card mb-5">
+  <div class="col-sm-5 offset-1">
+    <div class="card mb-5" style="width: 25rem">
       <div class="card-body">
       <img class="card-img-top" src="${song.albumArt}" alt="Card image cap">
       </div>
     </div>
   </div>
-  <div class="col-sm-6">
+  <div class="col-sm-5">
     <div class="card text-right">
       <div class="card-body">
-      <h1 class="card-text">Artist: ${song.artist}</h1>
+      <h2 class="card-text">Artist: ${song.artist}</h2>
       <h3 class="card-title">Title: ${song.title}</h3>
-      <h5 class="list-group-item">collection: ${song.collection}</h5>
-      <h5 class="list-group-item">price: $${song.price}</h5>
-    <div class="card-body">
-    <audio src="" controls><a href="#" class="card-link btn btn-danger">${song.preview}</a></audio>
+      <h5 class="list-group-item mb-2">collection: ${song.collection}</h5>
+      <a href="https://www.apple.com/itunes/music/" class="btn btn-outline-danger" role="button" aria-pressed="true">price: $${song.price}</a>
+      <div class="card-body">
+    <audio controls controlsList="nodownload" src="${song.preview}"></audio>
   </div>
       </div>
     </div>
@@ -41,7 +41,23 @@ function ItunesController() {
   `
     }
 
+    //$( "div" ).filter( document.getElementById( "unique" ) );
+    //$( "div" ).filter( $( "#unique" ) );
+    //$("p").filter(".intro")
+
     document.getElementById('songs').innerHTML = template
     console.log(results)
   }
+
+//to pause music when another button is clicked
+  window.addEventListener("play", function(evt)
+{
+    if(window.$_currentlyPlaying && window.$_currentlyPlaying != evt.target)
+    {
+        window.$_currentlyPlaying.pause();
+    } 
+    window.$_currentlyPlaying = evt.target;
+}, true);
+
+
 }
